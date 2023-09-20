@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Pandoras.Insurance.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{7b193729-dc54-4723-9005-908ed1336121}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath />
+    <RootNamespace>Pandoras.Insurance.Database</RootNamespace>
+    <AssemblyName>Pandoras.Insurance.Database</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\AccidentReports.sql" />
+    <Build Include="dbo\Tables\Accidents.sql" />
+    <Build Include="dbo\Tables\Cars.sql" />
+    <Build Include="dbo\Tables\Categories.sql" />
+    <Build Include="dbo\Tables\Cities.sql" />
+    <Build Include="dbo\Tables\Claims.sql" />
+    <Build Include="dbo\Tables\CustomerCredentials.sql" />
+    <Build Include="dbo\Tables\Customers.sql" />
+    <Build Include="dbo\Tables\EmployeeCredentials.sql" />
+    <Build Include="dbo\Tables\Employees.sql" />
+    <Build Include="dbo\Tables\Locations.sql" />
+    <Build Include="dbo\Tables\Manufacturers.sql" />
+    <Build Include="dbo\Tables\Models.sql" />
+    <Build Include="dbo\Tables\PaymentSchedules.sql" />
+    <Build Include="dbo\Tables\Permissions.sql" />
+    <Build Include="dbo\Tables\Policies.sql" />
+    <Build Include="dbo\Tables\PolicyPayments.sql" />
+    <Build Include="dbo\Tables\PolicyTypes.sql" />
+    <Build Include="dbo\Tables\Regions.sql" />
+    <Build Include="dbo\Tables\Roles.sql" />
+    <Build Include="dbo\Tables\RolesPermissions.sql" />
+    <Build Include="dbo\Stored Procedures\GetAccidentsByID.sql" />
+    <Build Include="dbo\Stored Procedures\GetCategoryByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_AssignPermissionToRole.sql" />
+    <Build Include="dbo\Stored Procedures\sp_DeleteAccidentReports.sql" />
+    <Build Include="dbo\Stored Procedures\sp_DeleteAccidents.sql" />
+    <Build Include="dbo\Stored Procedures\sp_DeleteCars.sql" />
+    <Build Include="dbo\Stored Procedures\sp_DeleteCategories.sql" />
+    <Build Include="dbo\Stored Procedures\sp_DeleteCity.sql" />
+    <Build Include="dbo\Stored Procedures\sp_DeleteClaims.sql" />
+    <Build Include="dbo\Stored Procedures\sp_DeleteCustomer.sql" />
+    <Build Include="dbo\Stored Procedures\sp_DeleteCustomerCredentials.sql" />
+    <Build Include="dbo\Stored Procedures\sp_DeleteEmployee.sql" />
+    <Build Include="dbo\Stored Procedures\sp_DeleteEmployeeCredentials.sql" />
+    <Build Include="dbo\Stored Procedures\sp_DeleteLocation.sql" />
+    <Build Include="dbo\Stored Procedures\sp_DeleteManufacturers.sql" />
+    <Build Include="dbo\Stored Procedures\sp_DeleteModels.sql" />
+    <Build Include="dbo\Stored Procedures\sp_DeletePaymentSchedule.sql" />
+    <Build Include="dbo\Stored Procedures\sp_DeletePermission.sql" />
+    <Build Include="dbo\Stored Procedures\sp_DeletePermissionToRole.sql" />
+    <Build Include="dbo\Stored Procedures\sp_DeletePolicy.sql" />
+    <Build Include="dbo\Stored Procedures\sp_DeletePolicyPayment.sql" />
+    <Build Include="dbo\Stored Procedures\sp_DeleteRegion.sql" />
+    <Build Include="dbo\Stored Procedures\sp_DeleteRole.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetAccidentReportByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetAccidentReports.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetAccidents.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetCarByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetCars.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetCategories.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetCities.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetCityByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetClaims.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetClaimsByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetCustomerByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetCustomerCredentialsByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetCustomers.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetCustomersCredentials.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetEmployee.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetEmployeeByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetEmployeeCredentials.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetEmployeeCredentialsByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetLocationByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetLocations.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetManufacturerByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetManufacturers.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetModelByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetModels.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetPaymentScheduleByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetPaymentSchedules.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetPermissionByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetPermissions.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetPolicy.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetPolicyByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetPolicyPayment.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetPolicyPaymentByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetRegionByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetRegions.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetRoleByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetRolePermissionsByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetRoles.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetRolesPermissions.sql" />
+    <Build Include="dbo\Stored Procedures\sp_InsertAccidentReports.sql" />
+    <Build Include="dbo\Stored Procedures\sp_InsertAccidents.sql" />
+    <Build Include="dbo\Stored Procedures\sp_InsertCars.sql" />
+    <Build Include="dbo\Stored Procedures\sp_InsertCategories.sql" />
+    <Build Include="dbo\Stored Procedures\sp_InsertCity.sql" />
+    <Build Include="dbo\Stored Procedures\sp_InsertClaims.sql" />
+    <Build Include="dbo\Stored Procedures\sp_InsertCustomer.sql" />
+    <Build Include="dbo\Stored Procedures\sp_InsertCustomerCredentials.sql" />
+    <Build Include="dbo\Stored Procedures\sp_InsertEmployee.sql" />
+    <Build Include="dbo\Stored Procedures\sp_InsertEmployeeCredentials.sql" />
+    <Build Include="dbo\Stored Procedures\sp_InsertLocation.sql" />
+    <Build Include="dbo\Stored Procedures\sp_InsertManufacturers.sql" />
+    <Build Include="dbo\Stored Procedures\sp_InsertModels.sql" />
+    <Build Include="dbo\Stored Procedures\sp_InsertPaymentSchedule.sql" />
+    <Build Include="dbo\Stored Procedures\sp_InsertPermission.sql" />
+    <Build Include="dbo\Stored Procedures\sp_InsertPolicy.sql" />
+    <Build Include="dbo\Stored Procedures\sp_InsertPolicyPayment.sql" />
+    <Build Include="dbo\Stored Procedures\sp_InsertRegion.sql" />
+    <Build Include="dbo\Stored Procedures\sp_InsertRole.sql" />
+    <Build Include="dbo\Stored Procedures\sp_UnassignPermissionToRole.sql" />
+    <Build Include="dbo\Stored Procedures\sp_UpdateAccidentReports.sql" />
+    <Build Include="dbo\Stored Procedures\sp_UpdateAccidents.sql" />
+    <Build Include="dbo\Stored Procedures\sp_UpdateCars.sql" />
+    <Build Include="dbo\Stored Procedures\sp_UpdateCategories.sql" />
+    <Build Include="dbo\Stored Procedures\sp_UpdateCity.sql" />
+    <Build Include="dbo\Stored Procedures\sp_UpdateClaims.sql" />
+    <Build Include="dbo\Stored Procedures\sp_UpdateCustomer.sql" />
+    <Build Include="dbo\Stored Procedures\sp_UpdateCustomerCredentials.sql" />
+    <Build Include="dbo\Stored Procedures\sp_UpdateEmployee.sql" />
+    <Build Include="dbo\Stored Procedures\sp_UpdateEmployeeCredentials.sql" />
+    <Build Include="dbo\Stored Procedures\sp_UpdateLocation.sql" />
+    <Build Include="dbo\Stored Procedures\sp_UpdateManufacturers.sql" />
+    <Build Include="dbo\Stored Procedures\sp_UpdateModels.sql" />
+    <Build Include="dbo\Stored Procedures\sp_UpdatePaymentSchedule.sql" />
+    <Build Include="dbo\Stored Procedures\sp_UpdatePermission.sql" />
+    <Build Include="dbo\Stored Procedures\sp_UpdatePermissionToRole.sql" />
+    <Build Include="dbo\Stored Procedures\sp_UpdatePolicy.sql" />
+    <Build Include="dbo\Stored Procedures\sp_UpdatePolicyPayment.sql" />
+    <Build Include="dbo\Stored Procedures\sp_UpdateRegion.sql" />
+    <Build Include="dbo\Stored Procedures\sp_UpdateRole.sql" />
+  </ItemGroup>
+</Project>
